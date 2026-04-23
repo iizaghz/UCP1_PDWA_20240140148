@@ -1,11 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gallery</title>
+  <meta charset="UTF-8">
+  <title>Gallery</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    
+
+<h1>Gallery</h1>
+
+<nav>
+  <a href="./index.html">Home</a>
+  <a href="./form.html">Form</a>
+</nav>
+
+<h2>Gambar</h2>
+<img id="gambar" src="https://via.placeholder.com/300" width="300">
+
+<br><br>
+<button onclick="gantiGambar()">Ganti Gambar</button>
+
+<h2>Video</h2>
+<iframe width="400" height="250"
+src="https://www.youtube.com/embed/tgbNymZ7vqY">
+</iframe>
+
+<h2>Audio</h2>
+<audio id="audio">
+  <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3">
+</audio>
+
+<br>
+<button onclick="playAudio()">Play</button>
+<button onclick="pauseAudio()">Pause</button>
+
+<script src="js/script.js"></script>
 </body>
 </html>
