@@ -1,39 +1,71 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
-  <meta charset="UTF-8">
-  <title>Gallery</title>
-  <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Community | Gallery</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
+    <nav class="navbar">
+        <a href="index.html" class="nav-brand">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="16 18 22 12 16 6"></polyline>
+                <polyline points="8 6 2 12 8 18"></polyline>
+            </svg>
+            Tech Community
+        </a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="form.html">Tambah Anggota</a></li>
+            <li><a href="gallery.html" class="active">Gallery</a></li>
+        </ul>
+    </nav>
 
-<h1>Gallery</h1>
+    <div class="container">
+        <h2 style="text-align: center; margin-bottom: 2rem;">Galeri Multimedia</h2>
 
-<nav>
-  <a href="./index.html">Home</a>
-  <a href="./form.html">Form</a>
-</nav>
+        <div class="media-grid">
+            <!-- 1. Gambar -->
+            <div class="media-card">
+                <h3>Kegiatan Komunitas</h3>
+                <img id="galleryImage"
+                    src="https://images.unsplash.com/photo-1653387300291-bfa1eeb90e16?auto=format&fit=crop&w=600&q=80"
+                    alt="Tech Activity" class="media-image">
+                <!-- Event onclick sederhana -->
+                <button type="button" class="btn btn-primary" onclick="changeImage()">Ganti Gambar</button>
+            </div>
 
-<h2>Gambar</h2>
-<img id="gambar" src="https://via.placeholder.com/300" width="300">
+            <!-- 2. Video YouTube (Iframe) -->
+            <div class="media-card">
+                <h3>Video Tutorial</h3>
+                <iframe src="https://www.youtube.com/embed/Q2VqCG13ejA" title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 1rem; text-align: center;">Tech
+                    Highlights & Innovations</p>
+            </div>
 
-<br><br>
-<button onclick="gantiGambar()">Ganti Gambar</button>
+            <!-- 3. Audio (Tag <audio>) -->
+            <div class="media-card">
+                <h3>Music</h3>
+                <!-- Tag audio standar -->
+                <audio id="galleryAudio" controls>
+                    <source src="sza.mp3" type="audio/mpeg">
+                    Browser Anda tidak mendukung elemen audio.
+                </audio>
+                <div style="margin-top: 1.5rem; width: 100%; display: flex; justify-content: center;">
+                    <!-- Event onclick untuk play/pause audio -->
+                    <button type="button" id="audioBtn" class="btn btn-primary" onclick="toggleAudio()">Play Audio</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
-<h2>Video</h2>
-<iframe width="400" height="250"
-src="https://www.youtube.com/embed/tgbNymZ7vqY">
-</iframe>
-
-<h2>Audio</h2>
-<audio id="audio">
-  <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3">
-</audio>
-
-<br>
-<button onclick="playAudio()">Play</button>
-<button onclick="pauseAudio()">Pause</button>
-
-<script src="js/script.js"></script>
+    <script src="js/script.js"></script>
 </body>
+
 </html>

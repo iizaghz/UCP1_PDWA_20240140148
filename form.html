@@ -1,38 +1,63 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <title>Form Anggota</title>
-  <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Community | Tambah Anggota</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <nav class="navbar">
+        <a href="index.html" class="nav-brand">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+            Tech Community
+        </a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="form.html" class="active">Tambah Anggota</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+        </ul>
+    </nav>
 
-<h1>Form Pendaftaran</h1>
+    <div class="container">
+        <h2 style="text-align: center; margin-bottom: 2rem;">Pendaftaran Anggota Baru</h2>
+        
+        <div class="form-container">
+            <!-- Event onsubmit dipanggil di sini -->
+            <form id="memberForm" onsubmit="handleMemberSubmit(event)">
+                <div class="form-group">
+                    <label for="name">Nama Lengkap</label>
+                    <input type="text" id="name" class="form-control" placeholder="Masukkan nama Anda" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Alamat Email</label>
+                    <input type="email" id="email" class="form-control" placeholder="contoh@email.com" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="interest">Bidang Minat</label>
+                    <select id="interest" class="form-control" required>
+                        <option value="">Pilih bidang minat...</option>
+                        <option value="Web Development">Web Development</option>
+                        <option value="Mobile Development">Mobile Development</option>
+                        <option value="Artificial Intelligence">Artificial Intelligence</option>
+                        <option value="UI/UX Design">UI/UX Design</option>
+                        <option value="Data Science">Data Science</option>
+                    </select>
+                </div>
+                
+                <div style="display: flex; gap: 1rem; margin-top: 2rem;">
+                    <button type="submit" class="btn btn-primary" style="flex: 1;">Daftar</button>
+                    <!-- Tombol Kembali menggunakan tag anchor dengan href -->
+                    <a href="index.html" class="btn btn-outline" style="flex: 1; text-align: center;">Kembali</a>
+                </div>
+            </form>
+            
+            <div id="formAlert" class="alert-message alert-success"></div>
+        </div>
+    </div>
 
-<nav>
-  <a href="./index.html">Home</a>
-  <a href="./gallery.html">Gallery</a>
-</nav>
-
-<form id="formAnggota">
-  <label>Nama:</label>
-  <input type="text" id="nama" required>
-
-  <label>Email:</label>
-  <input type="email" id="email" required>
-
-  <label>Bidang Minat:</label>
-  <select id="minat">
-    <option>Web Development</option>
-    <option>AI</option>
-    <option>Cyber Security</option>
-  </select>
-
-  <button type="submit">Submit</button>
-</form>
-
-<div id="output"></div>
-
-<script src="js/script.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>

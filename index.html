@@ -1,32 +1,47 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <title>Tech Community</title>
-  <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Community | Home</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <nav class="navbar">
+        <a href="index.html" class="nav-brand">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+            Tech Community
+        </a>
+        <ul class="nav-links">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="form.html">Tambah Anggota</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+        </ul>
+    </nav>
 
-  <h1>Selamat Datang di Web Tech Community</h1>
-  <p>Tech Community adalah web untuk belajar teknologi.</p>
+    <div class="container">
+        <div class="hero">
+            <h1>Selamat Datang di Tech Community</h1>
+            <p>Bergabunglah dengan komunitas teknologi terbaik. Temukan koneksi, bagikan ide, dan kembangkan skill Anda bersama ratusan developer dan inovator lainnya.</p>
+        </div>
 
-  <nav>
-    <a href="./index.html">Home</a>
-    <a href="./form.html">Daftar</a>
-    <a href="./gallery.html">Gallery</a>
-  </nav>
+        <h2 style="margin-bottom: 1rem;">Daftar Anggota</h2>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nama</th>
+                        <th>Email</th>
+                        <th>Bidang Minat</th>
+                    </tr>
+                </thead>
+                <tbody id="membersTableBody">
+                    <!-- Data will be populated by JavaScript -->
+                </tbody>
+            </table>
+        </div>
+    </div>
 
-  <h2>Data Anggota</h2>
-  <table>
-    <thead> 
-    <tr>
-      <th>Nama</th>
-      <th>Email</th>
-      <th>Minat</th>
-    </tr>
-    </thead>
-  </table>
-
-  <script src="js/script.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
