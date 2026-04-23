@@ -1,11 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <title>Form Anggota</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    
+
+<h1>Form Pendaftaran</h1>
+
+<nav>
+  <a href="./index.html">Home</a>
+  <a href="./gallery.html">Gallery</a>
+</nav>
+
+<form id="formAnggota">
+  <label>Nama:</label>
+  <input type="text" id="nama" required>
+
+  <label>Email:</label>
+  <input type="email" id="email" required>
+
+  <label>Bidang Minat:</label>
+  <select id="minat">
+    <option>Web Development</option>
+    <option>AI</option>
+    <option>Cyber Security</option>
+  </select>
+
+  <button type="submit">Submit</button>
+</form>
+
+<div id="output"></div>
+
+<script src="js/script.js"></script>
 </body>
 </html>
